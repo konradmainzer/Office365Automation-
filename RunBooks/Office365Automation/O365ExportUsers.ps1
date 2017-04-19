@@ -51,7 +51,7 @@ Debug -text ("Connected Successfully to Office 365") -action "write"
 Debug -text ("Connecting to Power BI") -action "write"
 $powerBICred = Get-AutomationPSCredential -Name 'PowerBICred'
 $authToken = Get-PBIAuthToken -ClientId "0f3ee942-2f4e-460c-9708-6c056827ebf9" -Credential $powerBICred	
-$group = Get-PBIGroup -authToken $authToken -name "Office365 (Power BI Group)"
+$group = Get-PBIGroup -authToken $authToken -name "Office365"
 Set-PBIGroup -id $group.id
 Debug -text ("Connected Successfully to Power BI") -action "write"
 
